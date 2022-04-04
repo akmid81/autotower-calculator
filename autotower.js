@@ -107,7 +107,7 @@ async function sendOrder(e) {
    console.log(JSON.stringify(order));
 
    //Отправка данных формы к файлу обработчику contact-form.php
-   let response = await fetch('files/contact-form.php', {
+   let response = await fetch('contact-form.php', {
       method: 'POST',
       body: JSON.stringify(order)
    });
