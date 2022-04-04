@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="files/style.css">
+   <title>Калькулятор стоимости услуг автовышки</title>
+</head>
+
+<body style="display:flex;justify-content:center;">
+   <div style="max-width:1000px">
+
+<form id="autotower" class="flex">
+   <div class="head">
+      <div class="big">Калькулятор стоимости аренды автовышки</div>
+   </div>
+   <div class="options">
+      <label for="tower_type">Выберите длину автовышки (метры):</label>
+      <select name="tower_type" id="tower_type">
+         <option value="14">14</option>
+         <option value="16">16</option>
+         <option value="22">22</option>
+         <option value="24">24</option>
+         <option value="26">26</option>
+         <option value="28">28</option>
+         <option value="32">32</option>
+         <option value="34">34</option>
+      </select>
+      <label for="hour">Укажите количество часов (минимум 2):</label>
+      <input type="number" id="hour" value="2" min="2" max="100" step="1">
+   </div>
+   <div class="length">
+      <div class="radio_group">
+         <input type="radio" name="out" id="item1" view="В пределах Ростова-на-Дону" value="0" checked>
+         <label for="item1">В пределах Ростова-на-Дону</label>
+      </div>
+      <div class="radio_group">
+         <input type="radio" name="out" id="item2" view="За пределы Ростова-на-Дону" value="1">
+         <label for="item2">За пределы Ростова-на-Дону</label>
+      </div>
+      <input type="number" name="km" id="km" value="0" min="1" step="1" disabled>
+   </div>
+   <div class="result">
+      <div class="big">Итоговая стоимость:</div>
+      <div class="big" id="sum">10000</div>
+      <input type="button" value="Заказать" id="show_form" class="button">
+      <div class="small">Стоимость смены указана без учёта НДС. Длительность смены составляет 8 часов включая 1 час
+         подачи.</div>
+   </div>
+   <div id="post">
+      <label for="name" class="big">Имя</label>
+      <input type="text" id="name" required>
+      <input type="text" id="check" hidden>
+      <label for="tel" class="big">Телефон для связи</label>
+      <input type="tel" id="tel" required>
+
+      <div class="btns flex">
+         <input type="button" id="cancel" value="X" class="button">
+         <input type="submit" class="button">
+      </div>
+   </div>
+</form>
+
+<script async src="files/autotower.js"></script>
+
+</div>
+</body>

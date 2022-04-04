@@ -1,0 +1,109 @@
+.flex {
+   display: flex;
+}
+
+form#autotower,
+.btns {
+   flex-wrap: nowrap;
+   justify-content: center;
+   color: white;
+   font: normal 16px normal Arial, Helvetica, sans-serif;
+
+}
+
+.head {
+   background: #6b7688;
+   width: 19%;
+   text-transform: uppercase;
+}
+
+.options {
+   background: #208251;
+   width: 27%;
+}
+
+.length {
+   background: #318e5f;
+   width: 27%;
+}
+
+.result {
+   background: #359965;
+   width: 27%;
+}
+
+form#autotower>div {
+   padding: 0.5em;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+form#autotower #post {
+   position: absolute;
+   top: -999px;
+   border: 1px solid;
+   border-radius: .5em;
+   padding: 1em;
+   background-color: #3c6e3e;
+   z-index: 999;
+   transition: top 0.5s ease;
+   width: auto;
+}
+
+form#autotower .button {
+   cursor: pointer;
+   padding: 0px 15px;
+   line-height: 34px;
+   border-radius: 6px;
+   background-color: #e1772c;
+   color: #fff;
+   font-weight: bold;
+}
+
+form#autotower .button:hover {
+   background-color: #c5570a;
+}
+
+form#autotower .button:active {
+   background-color: #6d2d00;
+}
+
+form#autotower select,
+form#autotower input {
+   padding: 0.5em;
+   margin: 0.5em;
+   border-width: 0;
+   border-radius: 4px;
+}
+
+form#autotower .big {
+   font-size: 1.2em;
+   font-weight: bold;
+}
+
+form#autotower .small {
+   font-size: .8em;
+}
+
+form#autotower #sum {
+   margin-top: 0.5em;
+}
+
+form#autotower #sum::after {
+   content: "₽";
+   margin: 0 0 0 8px;
+}
+
+/* smaller than 720 */
+@media screen and (max-width: 720px) {
+form#autotower {
+   flex-direction: column;
+   align-items: center;
+}
+.head, .options, .length, .result {
+   width: 90%;
+}
+}
